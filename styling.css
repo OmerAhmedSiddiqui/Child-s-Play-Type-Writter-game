@@ -1,0 +1,191 @@
+body {
+    background-color:#99edc3 ;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+#logo {
+    width: 40%;
+}
+
+.navbar {
+    background-color: rgba(245, 245, 245, 0.6);
+}
+#Start {
+
+    padding: 30px;
+    border-radius: 50px;
+    font-size: 40px;
+}
+
+.startbtn {
+    margin-top: 300px;
+}
+#ul1{
+    margin-right: -450px;
+}
+
+.main {
+    background-color: rgba(245, 245, 245, 0.6);
+    border-radius: 50px;
+    margin-top: -150px;
+
+}
+
+
+
+.keys .col-1,
+#space {
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+
+
+@media only screen and (max-width:994px) {
+    .main {
+        margin-top: -200px;
+
+
+    }
+
+    .main {
+        border-radius: 0px;
+
+    }
+
+
+    .keys .col-1,
+    #space {
+        background-color: whitesmoke;
+        border-radius: 0px;
+
+    }
+
+
+}
+
+
+#first,
+#second,
+#third,
+#frth,
+#fifth,
+#sixth,
+#svth,
+#eigth,
+#ninth {
+    transform: scale(0.1);
+    position: fixed;
+}
+
+
+/* #firstpp,
+#secondpp,
+#thirdpp,
+#frthpp,
+#fifthpp,
+#sixthpp,
+#svthpp,
+#eigthpp,
+#ninthpp {
+    transform: scale(1);
+    transition: transform 4s, margin-top 15s;
+    margin-top: -1000px;
+    font-size: 40px;
+    border-radius: 100px;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(245, 245, 245, 0.5);
+
+}
+ */
+
+#beginner {
+    transform: scale(1);
+    transition: transform 4s, margin-top 15s;
+    margin-top: -1000px;
+    font-size: 40px;
+    border-radius: 100px;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(245, 245, 245, 0.5);
+
+}
+#medium {
+    transform: scale(1);
+    transition: transform 4s, margin-top 10s;
+    margin-top: -1000px;
+    font-size: 40px;
+    border-radius: 100px;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(245, 245, 245, 0.5);
+
+}
+#expert {
+    transform: scale(1);
+    transition: transform 2s, margin-top 7s;
+    margin-top: -1000px;
+    font-size: 40px;
+    border-radius: 100px;
+    width: 150px;
+    height: 100px;
+    background-color: rgba(245, 245, 245, 0.5);
+
+}
+
+
+
+#first {
+    margin-top: 50px;
+}
+
+#second {
+    margin-top: 100px;
+}
+
+#third {
+    margin-top: 0px;
+}
+
+#frth {
+    margin-top: 150px;
+}
+
+#fifth {
+    margin-top: 80px;
+}
+
+#sixth {
+    margin-top: 30px;
+}
+
+#svth {
+    margin-top: 100px;
+}
+
+#eigth {
+    margin-top: 200px;
+}
+
+#ninth {
+    margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
