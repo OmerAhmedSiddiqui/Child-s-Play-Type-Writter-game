@@ -106,74 +106,85 @@ body {
 
 #beginner {
     transform: scale(1);
-    transition: transform 4s, margin-top 15s;
+    transition:margin-top 50s, transform 15s;
     margin-top: -1000px;
     font-size: 40px;
     border-radius: 100px;
     width: 150px;
     height: 100px;
     background-color: rgba(245, 245, 245, 0.5);
-
+/* background-color: rgba(8, 159, 179,0.3); */
 }
 #medium {
     transform: scale(1);
-    transition: transform 4s, margin-top 10s;
+    transition: transform 8s, margin-top 35s;
     margin-top: -1000px;
     font-size: 40px;
     border-radius: 100px;
     width: 150px;
     height: 100px;
     background-color: rgba(245, 245, 245, 0.5);
+/* background-color: rgba(8, 159, 179,0.3); */
+
 
 }
 #expert {
     transform: scale(1);
-    transition: transform 2s, margin-top 7s;
+    transition: transform 4s, margin-top 20s;
     margin-top: -1000px;
     font-size: 40px;
     border-radius: 100px;
     width: 150px;
     height: 100px;
     background-color: rgba(245, 245, 245, 0.5);
+/* background-color: rgba(8, 159, 179,0.3); */
+
 
 }
 
 
 
 #first {
-    margin-top: 50px;
+    margin-top: -70px;
 }
 
 #second {
-    margin-top: 100px;
+    margin-top: -20px;
+
 }
 
-#third {
-    margin-top: 0px;
+#third {    margin-top: -10px;
+
 }
 
 #frth {
-    margin-top: 150px;
+    margin-top: -20px;
+
 }
 
 #fifth {
-    margin-top: 80px;
+    margin-top: -50px;
+
 }
 
 #sixth {
-    margin-top: 30px;
+    margin-top: -40px;
+
 }
 
 #svth {
-    margin-top: 100px;
+    margin-top: -20px;
+
 }
 
 #eigth {
-    margin-top: 200px;
+    margin-top: -50px;
+
 }
 
 #ninth {
-    margin-top: 0px;
+    margin-top: -60px;
+
 }
 
 
@@ -181,8 +192,21 @@ body {
 
 
 
+#levelUp{
+    width: 15%;
+    margin-top: -550px;
+    margin-left: 30px;
+    background-color: rgba(245, 245, 245, 0.7);
 
+}
 
+#levelUp2{
+    width: 15%;
+    margin-top: -550px;
+    margin-left: 1600px;
+    background-color: rgba(245, 245, 245, 0.7);
+
+}
 
 
 

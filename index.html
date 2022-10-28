@@ -40,12 +40,12 @@
                             <li class="nav-item dropdown"><a href="" class="nav-link dropdown-toggle"
                                     data-toggle="dropdown">Level </a>
                                 <div class="dropdown-menu">
-                                    <label for="beginner" class="dropdown-item"><input type="radio" 
-                                            name="levels" onclick="handleClick(this)" value="beginner"> Beginner</label>
-                                    <label for="medium" class="dropdown-item"><input type="radio" 
-                                            name="levels" onclick="handleClick(this)" value="medium"> Medium</label>
-                                    <label for="expert" class="dropdown-item"><input type="radio" 
-                                            name="levels" onclick="handleClick(this)" value="expert"> Expert</label>
+                                    <label for="beginnerinput" class="dropdown-item"><input type="radio" 
+                                            name="levels" onclick="handleClick(this)" value="beginner" id="beginnerinput"> Beginner</label>
+                                    <label for="mediumiput" class="dropdown-item"><input type="radio" 
+                                            name="levels" onclick="handleClick(this)" value="medium" id="mediumiput"> Medium</label>
+                                    <label for="expertinput" class="dropdown-item"><input type="radio" 
+                                            name="levels" onclick="handleClick(this)" value="expert" id="expertinput"> Expert</label>
                                 </div>
                             </li>
                             <li class="nav-item ">
@@ -60,7 +60,7 @@
                             <!-- <li class="nav-item "><a href="" class="nav-link">Sign Out </a></li> -->
                         </ul>
                     </div>
-
+                  
                     <div id="popUp2">
                         <ul class="navbar-nav  ">
                             <li class="nav-items px-5">
@@ -84,6 +84,7 @@
         </div>
     </div>
 
+    <audio id="mySound" src="audios/letsplay_gramoji-39705.mp3"></audio>
 
     <div class="container startbtn">
         <div class="row ">
@@ -108,9 +109,11 @@
 
         </div>
     </div>
+<img src="imges/output-onlinegiftools.gif" alt="" id="levelUp" >
+<img src="imges/output-onlinegiftools.gif" alt="" id="levelUp2" >
 
 
-    <div id="visible">
+    <div id="visible" >
 
 
         <div class="container fixed-bottom my-5   border lead main  p-md-5 shadow ">

@@ -7,6 +7,12 @@ let visible = document.querySelector("#visible");
 visible.style.visibility = "hidden"
 popUp2.style.visibility = "hidden"
 
+let levelUp = document.querySelector("#levelUp")
+let levelUpsecond = document.querySelector("#levelUp2")
+levelUp.style.visibility = "hidden"
+levelUpsecond.style.visibility = "hidden"
+
+
 let bodypick = document.querySelector("#bodypick");
 let logo = document.querySelector("#logo");
 
@@ -98,12 +104,15 @@ let ran8;
 let ran9;
 
 let popAlphabets = []
-console.log(popAlphabets)
 let finishCalled = false;
+function levelUpFunc() {
+   
+   levelUp.style.visibility = "hidden"
+   levelUpsecond.style.visibility = "hidden"
+}
 function start() {
 
-
-
+   setTimeout(levelUpFunc, 2000)
 
    ran1 = Math.floor(Math.random() * 26);
    ran2 = Math.floor(Math.random() * 26);
@@ -131,24 +140,11 @@ function start() {
    eigth.innerHTML = alphabets[ran8]
    ninth.innerHTML = alphabets[ran9]
    popAlphabets.push(alphabets[ran1], alphabets[ran2], alphabets[ran3], alphabets[ran4], alphabets[ran5], alphabets[ran6], alphabets[ran7], alphabets[ran8], alphabets[ran9])
-   console.log(alphabets[ran1], alphabets[ran2], alphabets[ran3], alphabets[ran4], alphabets[ran5], alphabets[ran6], alphabets[ran7], alphabets[ran8], alphabets[ran9])
-   console.log(popAlphabets)
 
    visible.style.visibility = "visible"
    startvar.style.visibility = "hidden"
    popUp.style.visibility = "hidden"
    popUp2.style.visibility = "visible"
-
-
-   // first.id = "firstpp"
-   // second.id = "secondpp"
-   // third.id = "thirdpp"
-   // frth.id = "frthpp"
-   // fifth.id = "fifthpp"
-   // sixth.id = "sixthpp"
-   // svth.id = "svthpp"
-   // eigth.id = "eigthpp"
-   // ninth.id = "ninthpp"
 
 
    first.id = currentValue
@@ -160,6 +156,34 @@ function start() {
    svth.id = currentValue
    eigth.id = currentValue
    ninth.id = currentValue
+
+   q.style.backgroundColor = "whitesmoke"
+   w.style.backgroundColor = "whitesmoke"
+   e.style.backgroundColor = "whitesmoke"
+   r.style.backgroundColor = "whitesmoke"
+   t.style.backgroundColor = "whitesmoke"
+   y.style.backgroundColor = "whitesmoke"
+   u.style.backgroundColor = "whitesmoke"
+   i.style.backgroundColor = "whitesmoke"
+   o.style.backgroundColor = "whitesmoke"
+   p.style.backgroundColor = "whitesmoke"
+   a.style.backgroundColor = "whitesmoke"
+   s.style.backgroundColor = "whitesmoke"
+   d.style.backgroundColor = "whitesmoke"
+   f.style.backgroundColor = "whitesmoke"
+   g.style.backgroundColor = "whitesmoke"
+   h.style.backgroundColor = "whitesmoke"
+   j.style.backgroundColor = "whitesmoke"
+   k.style.backgroundColor = "whitesmoke"
+   l.style.backgroundColor = "whitesmoke"
+   z.style.backgroundColor = "whitesmoke"
+   x.style.backgroundColor = "whitesmoke"
+   c.style.backgroundColor = "whitesmoke"
+   v.style.backgroundColor = "whitesmoke"
+   b.style.backgroundColor = "whitesmoke"
+   n.style.backgroundColor = "whitesmoke"
+   m.style.backgroundColor = "whitesmoke"
+
 
    if (alphabets[ran1] === "Q" || alphabets[ran2] === "Q" || alphabets[ran3] === "Q" || alphabets[ran4] === "Q" || alphabets[ran5] === "Q" || alphabets[ran6] === "Q" || alphabets[ran7] === "Q" || alphabets[ran8] === "Q" || alphabets[ran9] === "Q") {
       q.style.backgroundColor = "#99edc3"
@@ -217,24 +241,29 @@ function start() {
    }
 
 
-   if (finishCalled === false) {
-      if (currentValue === "beginner") {
-         finishTime = 6000
-      }
-      else if (currentValue === "medium") {
-         finishTime = 4000
-      } if (currentValue === "expert") {
-         finishTime = 2000
-      }
-      setTimeout(
-         finish,
-         finishTime
-      )
-      finishTime = true
+   // if (finishCalled === false) {
+   //    if (currentValue === "beginner") {
+   //       finishTime = 19500
+   //    }
+   //    else if (currentValue === "medium") {
+   //       finishTime = 14800
+   //    } if (currentValue === "expert") {
+   //       finishTime = 8000
+   //    }
+   //    setTimeout(
+   //       finish,
+   //       finishTime
+   //    )
+   //    finishTime = true
 
-   }
+   // }
+   // if(first.style.marginTop === "300px"){
+   //    finish()
+   // }
 
-
+   setTimeout(
+      levelUp, 1000
+   )
 }
 let inputKey;
 
@@ -242,14 +271,13 @@ let keys = document.onkeypress = function (e) {
    inputKey = e.key
    inputKey = inputKey.toUpperCase()
    ballons()
-   all = all + 1
 
-   console.log(all)
-   if (all === 9 && finishCalled === false) {
-      finish()
-      popAlphabets = []
-      finishTime = true
-   }
+   // console.log(all)
+   // if (all === 12 && finishCalled === false) {
+   //    finish()
+   //    popAlphabets = []
+   //    finishTime = true
+   // }
    allpress.innerHTML = `All : ${all}`;
    correctpress.innerHTML = `Correct : ${correct}`;
    wrongpress.innerHTML = `Wrong : ${wrong}`;
@@ -301,55 +329,71 @@ let all = 0;
 let correct = 0;
 let wrong = 0;
 
-function ballons() {
+async function ballons() {
    for (var i = 0; i < popAlphabets.length; i++) {
       if (popAlphabets[i] === inputKey) {
          if (first.innerHTML === inputKey) {
-            first.id = "first"
-            correct = correct + 1
+            first.style.visibility = "hidden"
+            // correct = correct + 1
 
          }
          if (second.innerHTML === inputKey) {
-            second.id = "second"
-            correct = correct + 1
+            second.style.visibility = "hidden"
+
+            // second.id = "second"
+            // correct = correct + 1
 
 
 
          } if (third.innerHTML === inputKey) {
-            third.id = "third"
-            correct = correct + 1
+            third.style.visibility = "hidden"
+
+            // third.id = "third"
+            // correct = correct + 1
 
 
 
          } if (frth.innerHTML === inputKey) {
-            frth.id = "frth"
-            correct = correct + 1
+            frth.style.visibility = "hidden"
+
+            // frth.id = "frth"
+            // correct = correct + 1
 
 
 
          } if (fifth.innerHTML === inputKey) {
-            fifth.id = "fifth"
-            correct = correct + 1
+            fifth.style.visibility = "hidden"
+
+            // fifth.id = "fifth"
+            // correct = correct + 1
 
 
          } if (sixth.innerHTML === inputKey) {
-            sixth.id = "sixth"
-            correct = correct + 1
+            sixth.style.visibility = "hidden"
+
+            // sixth.id = "sixth"
+            // correct = correct + 1
 
 
          } if (svth.innerHTML === inputKey) {
-            svth.id = "svth"
-            correct = correct + 1
+            svth.style.visibility = "hidden"
+
+            // svth.id = "svth"
+            // correct = correct + 1
 
 
          } if (eigth.innerHTML === inputKey) {
-            eigth.id = "eigth"
-            correct = correct + 1
+            eigth.style.visibility = "hidden"
+
+            // eigth.id = "eigth"
+            // correct = correct + 1
 
          }
          if (ninth.innerHTML === inputKey) {
-            ninth.id = "ninth"
-            correct = correct + 1
+            ninth.style.visibility = "hidden"
+
+            // ninth.id = "ninth"
+            // correct = correct + 1
 
 
          }
@@ -360,21 +404,59 @@ function ballons() {
 
       //  if( inputKey !== popAlphabets[i]) {
       //    wrong = wrong + 1
-      //    all = all + 1
+      //    // all = all + 1
 
       // }
 
    }
+   if (first.style.visibility === "hidden" && second.style.visibility === "hidden" && third.style.visibility === "hidden" && frth.style.visibility === "hidden" && fifth.style.visibility === "hidden" && sixth.style.visibility === "hidden" && svth.style.visibility === "hidden" && eigth.style.visibility === "hidden" && ninth.style.visibility === "hidden") {
+      // finish()
+      first.id = "first"
+      second.id = "second"
+      third.id = "third"
+      frth.id = "frth"
+      fifth.id = "fifth"
+      sixth.id = "sixth"
+      svth.id = "svth"
+      eigth.id = "eigth"
+      ninth.id = "ninth"
 
+
+
+      first.style.visibility = "visible"
+      second.style.visibility = "visible"
+      third.style.visibility = "visible"
+      frth.style.visibility = "visible"
+      fifth.style.visibility = "visible"
+      sixth.style.visibility = "visible"
+      svth.style.visibility = "visible"
+      eigth.style.visibility = "visible"
+      ninth.style.visibility = "visible"
+      popAlphabets = []
+
+      levelUp.style.visibility = "visible"
+      levelUpsecond.style.visibility = "visible"
+
+      setTimeout(start, 500)
+
+   }
+   if (popAlphabets.includes(inputKey)) {
+      correct = correct + 1
+      all = all + 1
+
+   }
+   if (popAlphabets.includes(inputKey) === "false") {
+      wrong = wrong + 1
+   }
 
 }
 
 
 
 
-
-
 async function finish() {
+
+
    await Swal.fire({
       title: 'Play Again',
       width: 600,
