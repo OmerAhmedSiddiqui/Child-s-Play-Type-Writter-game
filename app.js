@@ -85,6 +85,7 @@ let v = document.querySelector("#v")
 let b = document.querySelector("#b")
 let n = document.querySelector("#n")
 let m = document.querySelector("#m")
+let space = document.querySelector("#space")
 
 
 
@@ -106,12 +107,13 @@ let ran9;
 let popAlphabets = []
 let finishCalled = false;
 function levelUpFunc() {
-   
+
    levelUp.style.visibility = "hidden"
    levelUpsecond.style.visibility = "hidden"
 }
 function start() {
-
+   let stratFuncSound = new Audio("audios/Pirates of the Caribbean theme - Captain Jack Sparrow ! Johny depp.mp3")
+   stratFuncSound.play()
    setTimeout(levelUpFunc, 2000)
 
    ran1 = Math.floor(Math.random() * 26);
@@ -184,7 +186,35 @@ function start() {
    n.style.backgroundColor = "whitesmoke"
    m.style.backgroundColor = "whitesmoke"
 
+   hint()
 
+
+   // if (finishCalled === false) {
+   //    if (currentValue === "beginner") {
+   //       finishTime = 19500
+   //    }
+   //    else if (currentValue === "medium") {
+   //       finishTime = 14800
+   //    } if (currentValue === "expert") {
+   //       finishTime = 8000
+   //    }
+   //    setTimeout(
+   //       finish,
+   //       finishTime
+   //    )
+   //    finishTime = true
+
+   // }
+   // if(first.style.marginTop === "300px"){
+   //    finish()
+   // }
+
+   setTimeout(
+      levelUp, 1000
+   )
+}
+
+function hint(){
    if (alphabets[ran1] === "Q" || alphabets[ran2] === "Q" || alphabets[ran3] === "Q" || alphabets[ran4] === "Q" || alphabets[ran5] === "Q" || alphabets[ran6] === "Q" || alphabets[ran7] === "Q" || alphabets[ran8] === "Q" || alphabets[ran9] === "Q") {
       q.style.backgroundColor = "#99edc3"
    }
@@ -240,30 +270,6 @@ function start() {
       m.style.backgroundColor = "#99edc3"
    }
 
-
-   // if (finishCalled === false) {
-   //    if (currentValue === "beginner") {
-   //       finishTime = 19500
-   //    }
-   //    else if (currentValue === "medium") {
-   //       finishTime = 14800
-   //    } if (currentValue === "expert") {
-   //       finishTime = 8000
-   //    }
-   //    setTimeout(
-   //       finish,
-   //       finishTime
-   //    )
-   //    finishTime = true
-
-   // }
-   // if(first.style.marginTop === "300px"){
-   //    finish()
-   // }
-
-   setTimeout(
-      levelUp, 1000
-   )
 }
 let inputKey;
 
@@ -283,44 +289,36 @@ let keys = document.onkeypress = function (e) {
    wrongpress.innerHTML = `Wrong : ${wrong}`;
 
 
-   // for (var i = 0; i < popAlphabets.length; i++) {
-   //    if (inputKey != popAlphabets[i]) {
-   //       q.style.backgroundColor = "red";
-   //       w.style.backgroundColor = "red";
-   //       // e.style.backgroundColor = "red"
-   //       r.style.backgroundColor = "red"
-   //       t.style.backgroundColor = "red"
-   //       y.style.backgroundColor = "red"
-   //       u.style.backgroundColor = "red"
-   //       // i.style.backgroundColor = "red"
-   //       o.style.backgroundColor = "red"
-   //       p.style.backgroundColor = "red"
-   //       a.style.backgroundColor = "red"
-   //       s.style.backgroundColor = "red"
-   //       d.style.backgroundColor = "red"
-   //       f.style.backgroundColor = "red"
-   //       g.style.backgroundColor = "red"
-   //       h.style.backgroundColor = "red"
-   //       j.style.backgroundColor = "red"
-   //       k.style.backgroundColor = "red"
-   //       l.style.backgroundColor = "red"
-   //       z.style.backgroundColor = "red"
-   //       x.style.backgroundColor = "red"
-   //       c.style.backgroundColor = "red"
-   //       v.style.backgroundColor = "red"
-   //       b.style.backgroundColor = "red"
-   //       n.style.backgroundColor = "red"
-   //       m.style.backgroundColor = "red"
-
-   //    }
-   // }
-
-
-
-
-
-
-
+};
+let keysUp = document.onkeyup = function () {
+   q.style.backgroundColor = "whitesmoke"
+   w.style.backgroundColor = "whitesmoke"
+   e.style.backgroundColor = "whitesmoke"
+   r.style.backgroundColor = "whitesmoke"
+   t.style.backgroundColor = "whitesmoke"
+   y.style.backgroundColor = "whitesmoke"
+   u.style.backgroundColor = "whitesmoke"
+   i.style.backgroundColor = "whitesmoke"
+   o.style.backgroundColor = "whitesmoke"
+   p.style.backgroundColor = "whitesmoke"
+   a.style.backgroundColor = "whitesmoke"
+   s.style.backgroundColor = "whitesmoke"
+   d.style.backgroundColor = "whitesmoke"
+   f.style.backgroundColor = "whitesmoke"
+   g.style.backgroundColor = "whitesmoke"
+   h.style.backgroundColor = "whitesmoke"
+   j.style.backgroundColor = "whitesmoke"
+   k.style.backgroundColor = "whitesmoke"
+   l.style.backgroundColor = "whitesmoke"
+   z.style.backgroundColor = "whitesmoke"
+   x.style.backgroundColor = "whitesmoke"
+   c.style.backgroundColor = "whitesmoke"
+   v.style.backgroundColor = "whitesmoke"
+   b.style.backgroundColor = "whitesmoke"
+   n.style.backgroundColor = "whitesmoke"
+   m.style.backgroundColor = "whitesmoke"
+   space.style.backgroundColor = "whitesmoke"
+   hint()
 
 };
 
@@ -330,83 +328,44 @@ let correct = 0;
 let wrong = 0;
 
 async function ballons() {
-   for (var i = 0; i < popAlphabets.length; i++) {
-      if (popAlphabets[i] === inputKey) {
+   for (var pop = 0; pop < popAlphabets.length; pop++) {
+      if (popAlphabets[pop] === inputKey) {
          if (first.innerHTML === inputKey) {
             first.style.visibility = "hidden"
-            // correct = correct + 1
 
          }
          if (second.innerHTML === inputKey) {
             second.style.visibility = "hidden"
 
-            // second.id = "second"
-            // correct = correct + 1
-
-
-
          } if (third.innerHTML === inputKey) {
             third.style.visibility = "hidden"
-
-            // third.id = "third"
-            // correct = correct + 1
-
-
 
          } if (frth.innerHTML === inputKey) {
             frth.style.visibility = "hidden"
 
-            // frth.id = "frth"
-            // correct = correct + 1
-
-
-
          } if (fifth.innerHTML === inputKey) {
             fifth.style.visibility = "hidden"
 
-            // fifth.id = "fifth"
-            // correct = correct + 1
-
-
          } if (sixth.innerHTML === inputKey) {
             sixth.style.visibility = "hidden"
-
-            // sixth.id = "sixth"
-            // correct = correct + 1
 
 
          } if (svth.innerHTML === inputKey) {
             svth.style.visibility = "hidden"
 
-            // svth.id = "svth"
-            // correct = correct + 1
-
 
          } if (eigth.innerHTML === inputKey) {
             eigth.style.visibility = "hidden"
 
-            // eigth.id = "eigth"
-            // correct = correct + 1
-
          }
          if (ninth.innerHTML === inputKey) {
             ninth.style.visibility = "hidden"
-
-            // ninth.id = "ninth"
-            // correct = correct + 1
-
 
          }
 
 
 
       }
-
-      //  if( inputKey !== popAlphabets[i]) {
-      //    wrong = wrong + 1
-      //    // all = all + 1
-
-      // }
 
    }
    if (first.style.visibility === "hidden" && second.style.visibility === "hidden" && third.style.visibility === "hidden" && frth.style.visibility === "hidden" && fifth.style.visibility === "hidden" && sixth.style.visibility === "hidden" && svth.style.visibility === "hidden" && eigth.style.visibility === "hidden" && ninth.style.visibility === "hidden") {
@@ -437,7 +396,7 @@ async function ballons() {
       levelUp.style.visibility = "visible"
       levelUpsecond.style.visibility = "visible"
 
-      setTimeout(start, 500)
+      setTimeout(start, 50)
 
    }
    if (popAlphabets.includes(inputKey)) {
@@ -445,8 +404,41 @@ async function ballons() {
       all = all + 1
 
    }
-   if (popAlphabets.includes(inputKey) === "false") {
+   if (!popAlphabets.includes(inputKey)) {
       wrong = wrong + 1
+      all = all + 1
+
+
+      let redColor = "#d70305"
+      q.style.backgroundColor = redColor;
+      w.style.backgroundColor = redColor;
+      e.style.backgroundColor = redColor
+      r.style.backgroundColor = redColor
+      t.style.backgroundColor = redColor
+      y.style.backgroundColor = redColor
+      u.style.backgroundColor = redColor
+      i.style.backgroundColor = redColor
+      o.style.backgroundColor = redColor
+      p.style.backgroundColor = redColor
+      a.style.backgroundColor = redColor
+      s.style.backgroundColor = redColor
+      d.style.backgroundColor = redColor
+      f.style.backgroundColor = redColor
+      g.style.backgroundColor = redColor
+      h.style.backgroundColor = redColor
+      j.style.backgroundColor = redColor
+      k.style.backgroundColor = redColor
+      l.style.backgroundColor = redColor
+      z.style.backgroundColor = redColor
+      x.style.backgroundColor = redColor
+      c.style.backgroundColor = redColor
+      v.style.backgroundColor = redColor
+      b.style.backgroundColor = redColor
+      n.style.backgroundColor = redColor
+      m.style.backgroundColor = redColor;
+      space.style.backgroundColor = redColor
+
+
    }
 
 }
