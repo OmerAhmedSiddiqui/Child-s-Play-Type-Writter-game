@@ -106,7 +106,7 @@ body {
 
 #beginner {
     transform: scale(1);
-    transition:margin-top 50s, transform 15s;
+    transition:margin-top 50s, transform 8s;
     margin-top: -1000px;
     font-size: 40px;
     border-radius: 100px;
@@ -130,7 +130,7 @@ body {
 }
 #expert {
     transform: scale(1);
-    transition: transform 4s, margin-top 20s;
+    transition: transform 2s, margin-top 20s;
     margin-top: -1000px;
     font-size: 40px;
     border-radius: 100px;
@@ -145,45 +145,45 @@ body {
 
 
 #first {
-    margin-top: -70px;
+    margin-top: -100px;
 }
 
 #second {
-    margin-top: -20px;
+    margin-top: -120px;
 
 }
 
-#third {    margin-top: -10px;
+#third {    margin-top: -90px;
 
 }
 
 #frth {
-    margin-top: -20px;
+    margin-top: -80px;
 
 }
 
 #fifth {
-    margin-top: -50px;
+    margin-top: -100px;
 
 }
 
 #sixth {
-    margin-top: -40px;
+    margin-top: -110px;
 
 }
 
 #svth {
-    margin-top: -20px;
+    margin-top: -90px;
 
 }
 
 #eigth {
-    margin-top: -50px;
+    margin-top: -110px;
 
 }
 
 #ninth {
-    margin-top: -60px;
+    margin-top: -120px;
 
 }
 

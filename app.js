@@ -23,8 +23,16 @@ $('[type="checkbox"]').click(function (e) {
    if (isChecked === true) {
       bodypick.style.backgroundColor = "black"
       logo.src = "imges/R-removebg-preview (1).png"
-      navbar.classList.add("navbar-dark")
-
+      navbar.classList.add("navbar-dark");
+      first.style.color = "white"
+      second.style.color = "white"
+      third.style.color = "white"
+      frth.style.color = "white"
+      fifth.style.color = "white"
+      sixth.style.color = "white"
+      svth.style.color = "white"
+      eigth.style.color = "white"
+      ninth.style.color = "white"
    }
    if (isChecked === false) {
       bodypick.style.backgroundColor = "#99edc3"
@@ -37,11 +45,12 @@ $('[type="checkbox"]').click(function (e) {
 
 let currentValue = "beginner";
 let finishTime;
+let finishCalled = false;
+let marginTopTime = 50;
+let transformTime = 8;
 
 function handleClick(myRadio) {
    currentValue = myRadio.value;
-
-   console.log(currentValue)
 
 }
 let popUp = document.querySelector("#popUp")
@@ -105,7 +114,7 @@ let ran8;
 let ran9;
 
 let popAlphabets = []
-let finishCalled = false;
+
 function levelUpFunc() {
 
    levelUp.style.visibility = "hidden"
@@ -115,6 +124,11 @@ function start() {
    let stratFuncSound = new Audio("audios/Pirates of the Caribbean theme - Captain Jack Sparrow ! Johny depp.mp3")
    stratFuncSound.play()
    setTimeout(levelUpFunc, 2000)
+
+   // setTimeout(decrasingTime, 50)
+
+   // marginTopTime = marginTopTime 
+
 
    ran1 = Math.floor(Math.random() * 26);
    ran2 = Math.floor(Math.random() * 26);
@@ -189,32 +203,44 @@ function start() {
    hint()
 
 
-   // if (finishCalled === false) {
-   //    if (currentValue === "beginner") {
-   //       finishTime = 19500
-   //    }
-   //    else if (currentValue === "medium") {
-   //       finishTime = 14800
-   //    } if (currentValue === "expert") {
-   //       finishTime = 8000
-   //    }
-   //    setTimeout(
-   //       finish,
-   //       finishTime
-   //    )
-   //    finishTime = true
 
-   // }
-   // if(first.style.marginTop === "300px"){
+   // if(first.style.margin-top === "-500px"){
    //    finish()
    // }
 
    setTimeout(
       levelUp, 1000
    )
+
+
+   if (finishCalled === false) {
+      if (currentValue === "beginner") {
+         finishTime = 19500;
+         marginTopTime = 50;
+
+      }
+      else if (currentValue === "medium") {
+         finishTime = 14800;
+         marginTopTime = 35;
+
+
+      } if (currentValue === "expert") {
+         finishTime = 8000;
+         marginTopTime = 20;
+
+
+      }
+      // if(first.style.visibility ==="visible"){
+      setTimeout(
+         finish,
+         finishTime
+      )
+      finishCalled = true
+
+   }
 }
 
-function hint(){
+function hint() {
    if (alphabets[ran1] === "Q" || alphabets[ran2] === "Q" || alphabets[ran3] === "Q" || alphabets[ran4] === "Q" || alphabets[ran5] === "Q" || alphabets[ran6] === "Q" || alphabets[ran7] === "Q" || alphabets[ran8] === "Q" || alphabets[ran9] === "Q") {
       q.style.backgroundColor = "#99edc3"
    }
@@ -268,6 +294,66 @@ function hint(){
       n.style.backgroundColor = "#99edc3"
    } if (alphabets[ran1] === "M" || alphabets[ran2] === "M" || alphabets[ran3] === "M" || alphabets[ran4] === "M" || alphabets[ran5] === "M" || alphabets[ran6] === "M" || alphabets[ran7] === "M" || alphabets[ran8] === "M" || alphabets[ran9] === "M") {
       m.style.backgroundColor = "#99edc3"
+   }
+
+}
+
+
+function wrongWordPress(parameter) {
+   if (!popAlphabets.includes("Q") && inputKey === "Q") {
+      q.style.backgroundColor = parameter
+   }
+   if (!popAlphabets.includes("W") && inputKey === "W") {
+      w.style.backgroundColor = parameter
+   }
+   if (!popAlphabets.includes("E") && inputKey === "E") {
+      e.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("R") && inputKey === "R") {
+      r.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("T") && inputKey === "T") {
+      t.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("Y") && inputKey === "Y") {
+      y.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("U") && inputKey === "U") {
+      u.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("I") && inputKey === "I") {
+      i.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("O") && inputKey === "O") {
+      o.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("P") && inputKey === "P") {
+      p.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("A") && inputKey === "A") {
+      a.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("S") && inputKey === "S") {
+      s.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("D") && inputKey === "D") {
+      d.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("F") && inputKey === "F") {
+      f.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("G") && inputKey === "G") {
+      g.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("H") && inputKey === "H") {
+      h.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("J") && inputKey === "J") {
+      j.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("K") && inputKey === "K") {
+      k.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("L") && inputKey === "L") {
+      l.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("Z") && inputKey === "Z") {
+      z.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("X") && inputKey === "X") {
+      x.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("C") && inputKey === "C") {
+      c.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("V") && inputKey === "V") {
+      v.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("B") && inputKey === "B") {
+      b.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("N") && inputKey === "N") {
+      n.style.backgroundColor = parameter
+   } if (!popAlphabets.includes("M") && inputKey === "M") {
+      m.style.backgroundColor = parameter
    }
 
 }
@@ -391,14 +477,15 @@ async function ballons() {
       svth.style.visibility = "visible"
       eigth.style.visibility = "visible"
       ninth.style.visibility = "visible"
-      popAlphabets = []
 
       levelUp.style.visibility = "visible"
       levelUpsecond.style.visibility = "visible"
 
       setTimeout(start, 50)
 
+
    }
+ 
    if (popAlphabets.includes(inputKey)) {
       correct = correct + 1
       all = all + 1
@@ -409,45 +496,28 @@ async function ballons() {
       all = all + 1
 
 
-      let redColor = "#d70305"
-      q.style.backgroundColor = redColor;
-      w.style.backgroundColor = redColor;
-      e.style.backgroundColor = redColor
-      r.style.backgroundColor = redColor
-      t.style.backgroundColor = redColor
-      y.style.backgroundColor = redColor
-      u.style.backgroundColor = redColor
-      i.style.backgroundColor = redColor
-      o.style.backgroundColor = redColor
-      p.style.backgroundColor = redColor
-      a.style.backgroundColor = redColor
-      s.style.backgroundColor = redColor
-      d.style.backgroundColor = redColor
-      f.style.backgroundColor = redColor
-      g.style.backgroundColor = redColor
-      h.style.backgroundColor = redColor
-      j.style.backgroundColor = redColor
-      k.style.backgroundColor = redColor
-      l.style.backgroundColor = redColor
-      z.style.backgroundColor = redColor
-      x.style.backgroundColor = redColor
-      c.style.backgroundColor = redColor
-      v.style.backgroundColor = redColor
-      b.style.backgroundColor = redColor
-      n.style.backgroundColor = redColor
-      m.style.backgroundColor = redColor;
-      space.style.backgroundColor = redColor
-
+      let redColor = "#f76f72"
+      wrongWordPress(redColor)
 
    }
+   // setTimeout(decrasingTime, 100)
 
 }
 
-
+function decrasingTime() {
+   first.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   second.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   third.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   frth.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   fifth.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   sixth.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   svth.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   eigth.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+   ninth.style.transition = `margin-top ${marginTopTime}s , transform ${transformTime}s`
+}
 
 
 async function finish() {
-
 
    await Swal.fire({
       title: 'Play Again',
